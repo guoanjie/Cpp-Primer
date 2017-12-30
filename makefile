@@ -1,5 +1,5 @@
 CC = g++
-CCFLAGS = -std=c++0x -I..
+CCFLAGS = -std=c++11 -I..
 LOCFLAGS =
 
 all: $(OBJECTS)
