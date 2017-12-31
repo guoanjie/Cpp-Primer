@@ -15,7 +15,7 @@ int main()
     }
     cout << s << endl;
     cin >> s;
-    for (decltype(s.length()) i = 0; i < s.length(); ++i)
+    for (decltype(s.length()) i = 0; i != s.length(); ++i)
         s[i] = 'X';
     cout << s << endl;
     return 0;
