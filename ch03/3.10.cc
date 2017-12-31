@@ -9,7 +9,7 @@ int main()
 {
     string input, output;
     getline(cin, input);
-    for (auto c: input)
+    for (auto c : input)
     {
         if(!ispunct(c))
             output += c;
