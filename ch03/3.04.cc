@@ -17,7 +17,7 @@ int main()
     if (s.length() < t.length())
         cout << t << " is longer" << endl;
     else if (s.length() > t.length())
-        cout << s << " is longr" << endl;
+        cout << s << " is longer" << endl;
     else
         cout << s << " and " << t << " have the same length" << endl;
     return 0;
