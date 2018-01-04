@@ -1,4 +1,4 @@
-// 6.08.cc
+// 6.08
 #ifndef CHAPTER6_H
 #define CHAPTER6_H
 
