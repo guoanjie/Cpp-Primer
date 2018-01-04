@@ -3,16 +3,14 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-void max(int a, int *b) {
-    if (a > *b)
-        *b = a;
+int max(int a, const int *pb) {
+    return a > *pb ? a : *pb;
 }
 
 int main()
 {
     int a, b;
     cin >> a >> b;
-    max(a, &b);
-    cout << b << endl;
+    cout << max(a, &b) << endl;
     return 0;
 }
