@@ -1,12 +1,9 @@
-#include <cassert>
 #include <iostream>
 #include <string>
 using std::cerr;
 using std::cin;
 using std::cout;
 using std::endl;
-using std::istream;
-using std::ostream;
 using std::string;
 
 struct Sales_data {
