@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+using std::cin;
 using std::istream;
 using std::ostream;
 using std::string;
@@ -59,5 +60,9 @@ ostream &print(ostream &os, const Sales_data &item) {
 
 int main()
 {
+    Sales_data item1;
+    Sales_data item2("0-201-70353-X");
+    Sales_data item3("0-201-70353-X", 4, 24.99);
+    Sales_data item4(cin);
     return 0;
 }
