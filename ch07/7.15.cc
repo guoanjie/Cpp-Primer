@@ -7,7 +7,7 @@ using std::string;
 
 struct Person {
     Person(const string &n, const string &a):
-            name(n), address(a) {}
+            name(n), address(a) { }
 
     string getName() const { return name; }
     string getAddress() const { return address; }
