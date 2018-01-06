@@ -5,6 +5,6 @@ int f(int, int);
 
 int main()
 {
-    vector<decltype(f)*> fv;
+    vector<decltype(f)*> vf;
     return 0;
 }
