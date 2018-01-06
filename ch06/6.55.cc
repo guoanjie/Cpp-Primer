@@ -1,8 +1,4 @@
-#include <iostream>
 #include <vector>
-using std::cin;
-using std::cout;
-using std::endl;
 using std::vector;
 
 int add(int, int);
@@ -13,11 +9,6 @@ int divide(int, int);
 int main()
 {
     vector<int (*)(int, int)> vf = {add, subtract, multiply, divide};
-    int a, b;
-    cin >> a >> b;
-    for (auto f : vf)
-        cout << f(a, b) << " ";
-    cout << endl;
     return 0;
 }
 
