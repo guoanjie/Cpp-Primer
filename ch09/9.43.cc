@@ -4,7 +4,6 @@
 std::string replaceAll(std::string s, std::string oldVal, std::string newVal) {
     auto found = s.find(oldVal);
     while (found != std::string::npos) {
-        std::cout << found << std::endl;
         auto first = s.begin() + found;
         first = s.erase(first, first + oldVal.size());
         s.insert(first, newVal.cbegin(), newVal.cend());
