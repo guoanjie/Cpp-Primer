@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
 
-std::string generate(std::string name, std::string prefix, std::string suffix) {    prefix += " ";
+std::string generate(std::string name, std::string prefix, std::string suffix) {
+    prefix += " ";
     name.insert(name.begin(), prefix.cbegin(), prefix.cend());
     name.append(" ");
     name.append(suffix.cbegin(), suffix.cend());
