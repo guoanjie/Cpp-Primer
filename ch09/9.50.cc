@@ -7,7 +7,7 @@ int main() {
     for (std::string s; std::cin >> s;)
         vs.push_back(s);
     double sum = 0;
-    for (auto s : vs)
+    for (const auto &s : vs)
         sum += stod(s);
     std::cout << sum << std::endl;
     return 0;
