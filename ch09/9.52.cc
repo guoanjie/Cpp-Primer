@@ -6,9 +6,11 @@
 
 std::string eval(const std::string &expr) {
     auto pos = expr.find_last_of("+-");
-    if (pos == std::string::npos)
+    if (pos == std::string::npos || pos == 0)
         return expr;
     else {
+        if (expr[pos - 1] == '+' || expr[pos - 1] == '-')
+            --pos;
         int val = stoi(eval(expr.substr(0, pos)));
         int rhs = stoi(expr.substr(pos + 1));
         if (expr[pos] == '+')
@@ -40,6 +42,8 @@ std::string evalParenth(const std::string &expr) {
 }
 
 int main() {
-    std::cout << evalParenth("12+34-56-((78-9)+10)") << std::endl;
+    std::string expr;
+    while (getline(std::cin, expr))
+        std::cout << evalParenth(expr) << std::endl;
     return 0;
 }
