@@ -15,7 +15,5 @@ int main() {
     };
     for (std::string author; std::cin >> author;)
         authors.erase(author);
-    for (const auto &p : authors)
-        std::cout << p.first << '\t' << p.second << std::endl;
     return 0;
 }
