@@ -36,22 +36,24 @@ class QueryResult {
 public:
     QueryResult(
         const std::shared_ptr<std::vector<std::string>> i,
+        std::string w,
         std::shared_ptr<std::set<int>> n
-    ): input(i), line_numbers(n) { }
+    ): input(i), word(w), line_numbers(n) { }
 private:
     std::shared_ptr<std::vector<std::string>> input;
     std::shared_ptr<std::set<int>> line_numbers;
+    std::string word;
 };
 
 QueryResult TextQuery::query(std::string s) {
-    return {this->input, this->line_numbers[s]};
+    return {this->input, s, this->line_numbers[s]};
 }
 
 std::ostream &print(std::ostream &os, const QueryResult &qr) {
-    if (qr.line_numbers) {
-        for (auto n : *qr.line_numbers)
-            os << (*qr.input)[n - 1] << std::endl;
-    }
+    auto line_numbers = qr.line_numbers ? qr.line_numbers : std::make_shared<std::set<int>>();
+    os << qr.word << " occurs " << line_numbers->size() << (line_numbers->size() > 1 ? " times:" : " time:") << std::endl;
+    for (auto n : *line_numbers)
+        os << "\t(line " << n << ") " << (*qr.input)[n - 1] << std::endl;
     return os;
 }
 
