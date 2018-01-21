@@ -17,7 +17,7 @@ private:
 };
 
 inline void swap(HasPtr &lhs, HasPtr &rhs) {
-    std::cout << "void swap(HasPtr&, HasPtr&)" << std::endl;
+    std::cout << "swap " << *lhs.ps << " and " << *rhs.ps << std::endl;
     using std::swap;
     swap(lhs.ps, rhs.ps);
     swap(lhs.i, rhs.i);
