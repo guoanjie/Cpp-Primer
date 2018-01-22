@@ -27,9 +27,9 @@ class Folder {
     friend void swap(Message&, Message&);
 public:
 private:
-    std::set<const Message*> messages;
-    void addMsg(const Message * pm) { messages.insert(pm); }
-    void remMsg(const Message * pm) { messages.erase(pm); }
+    std::set<Message*> messages;
+    void addMsg(Message * pm) { messages.insert(pm); }
+    void remMsg(Message * pm) { messages.erase(pm); }
 };
 
 Message::Message(const Message &m):
