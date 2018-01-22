@@ -28,8 +28,8 @@ class Folder {
 public:
 private:
     std::set<Message*> messages;
-    void addMsg(Message * pm) { messages.insert(pm); }
-    void remMsg(Message * pm) { messages.erase(pm); }
+    void addMsg(Message *pm) { messages.insert(pm); }
+    void remMsg(Message *pm) { messages.erase(pm); }
 };
 
 Message::Message(const Message &m):
