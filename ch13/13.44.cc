@@ -1,4 +1,3 @@
-#include <iostream>
 #include <memory>
 
 class String {
@@ -6,7 +5,7 @@ public:
     String() { char s[] = ""; init(s); }
     String(const String &s) { init(s.c_str); }
     String(char s[]) { init(s); }
-    String &operator=(const String &s);
+    String &operator=(const String&);
     ~String() { free(); }
 private:
     static std::allocator<char> alloc;
