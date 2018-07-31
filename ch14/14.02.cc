@@ -1,5 +1,4 @@
 #include <iostream>
-#include <set>
 #include <string>
 
 struct Sales_data;
@@ -66,7 +65,5 @@ bool compareIsbn(const Sales_data &trans1, const Sales_data &trans2) {
 }
 
 int main(int argc, char *argv[]) {
-    std::multiset<Sales_data, bool (*)(const Sales_data &, const Sales_data &)> bookstore(compareIsbn);
-    std::multiset<Sales_data, bool (*)(const Sales_data &, const Sales_data &)>::iterator set_it = bookstore.begin();
     return 0;
 }
