@@ -10,8 +10,7 @@ int main() {
     int n;
     while (std::cin >> n) {
         auto it = std::find_if_not(primes.begin(), primes.end(),
-            // std::bind(std::modulus<int>(), _1, n)
-            [n](const int p) { return n % p; }
+            std::bind(std::modulus<int>(), n, _1)
         );
         std::cout << (it == primes.end() ? 0 : *it) << std::endl;
     }
